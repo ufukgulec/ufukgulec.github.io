@@ -17,12 +17,19 @@ const CATEGORIES = [
         category: "Veritabanı ve Servisler",
         icon: "fa-solid fa-database",
         match: ["MSSQL", "Oracle", "T-SQL", "Entity Framework", "REST API", "XML / UBL", "WebSockets"]
+    },
+    {
+        category: "Mimari ve Altyapı",
+        icon: "fa-solid fa-layer-group",
+        match: ["Clean Architecture", "CQRS", "MediatR", "Docker", "Ubuntu VPS", "Nginx Proxy Manager"]
     }
 ];
 
 function groupSkills() {
     const remaining = new Set(skills);
+
     const groups = CATEGORIES.map(({ category, icon, match }) => {
+        // skills içinde olup match listesinde geçenleri seçiyoruz
         const items = match.filter((name) => remaining.has(name));
         items.forEach((name) => remaining.delete(name));
         return { category, icon, items };
