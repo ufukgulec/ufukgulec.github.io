@@ -145,7 +145,7 @@ export const contact = [
     },
     {
         label: "LinkedIn",
-        link: "https://www.linkedin.com/ufukgulec",
+        link: "https://www.linkedin.com/in/ufukgulec",
         icon: "fa-brands fa-linkedin",
     },
     {

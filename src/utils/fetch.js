@@ -1,4 +1,4 @@
-const FETCH_TIMEOUT_MS = 10_000;
+ï»¿const FETCH_TIMEOUT_MS = 10_000;
 
 export async function fetchJson(url, label = url) {
     const controller = new AbortController();
@@ -18,11 +18,11 @@ export function timeAgo(dateStr) {
     const elapsed = Date.now() - Date.parse(dateStr);
     const s = 1_000, m = 60_000, h = 3_600_000,
         d = 86_400_000, mo = 2_592_000_000, y = 31_536_000_000;
-    const fmt = (n, unit, pluralUnit) => `${n} ${n !== 1 ? pluralUnit : unit} önce`;
+    const fmt = (n, unit, pluralUnit) => `${n} ${n !== 1 ? pluralUnit : unit} Ã¶nce`;
     if (elapsed < m) return fmt(Math.floor(elapsed / s), "saniye", "saniye");
     if (elapsed < h) return fmt(Math.floor(elapsed / m), "dakika", "dakika");
     if (elapsed < d) return fmt(Math.floor(elapsed / h), "saat", "saat");
-    if (elapsed < mo) return fmt(Math.floor(elapsed / d), "gün", "gün");
+    if (elapsed < mo) return fmt(Math.floor(elapsed / d), "gÃ¼n", "gÃ¼n");
     if (elapsed < y) return fmt(Math.floor(elapsed / mo), "ay", "ay");
-    return fmt(Math.floor(elapsed / y), "yýl", "yýl");
+    return fmt(Math.floor(elapsed / y), "yÄ±l", "yÄ±l");
 }

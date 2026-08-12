@@ -1,8 +1,8 @@
-import { html, render } from "https://unpkg.com/lit-html?module";
+ï»¿import { html, render } from "https://unpkg.com/lit-html?module";
 import { fetchJson } from "../utils/fetch.js";
 
 const errorCardTemplate = (platform) => html`
-  <p class="fetch-error">${platform} profili yüklenemedi.</p>
+  <p class="fetch-error">${platform} profili yÃ¼klenemedi.</p>
 `;
 
 const statBlock = (stat) => html`
@@ -39,7 +39,7 @@ async function hydrateGithubCard(el) {
                 urlLabel: data.html_url.replace("https://", ""),
                 stats: [
                     { label: "Depolar", value: data.public_repos },
-                    { label: "Takipçi", value: data.followers },
+                    { label: "TakipÃ§i", value: data.followers },
                     { label: "Takip Edilen", value: data.following },
                 ],
             }),
@@ -68,9 +68,9 @@ async function hydrateStackCard(el) {
                 url: user.link,
                 urlLabel: username,
                 stats: [
-                    { label: "Ýtibar", value: user.reputation },
-                    { label: "Altýn", value: user.badge_counts.gold },
-                    { label: "Gümüþ", value: user.badge_counts.silver },
+                    { label: "Ä°tibar", value: user.reputation },
+                    { label: "AltÄ±n", value: user.badge_counts.gold },
+                    { label: "GÃ¼mÃ¼ÅŸ", value: user.badge_counts.silver },
                     { label: "Bronz", value: user.badge_counts.bronze },
                 ],
             }),

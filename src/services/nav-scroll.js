@@ -1,4 +1,4 @@
-import { qs, qsa } from "../utils/dom.js";
+﻿import { qs, qsa } from "../utils/dom.js";
 import { NAV_LINKS } from "../components/nav.js";
 
 function initScrollProgress() {

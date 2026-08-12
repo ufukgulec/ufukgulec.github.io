@@ -1,4 +1,4 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-app.js";
+ï»¿import { initializeApp } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-analytics.js";
 import {
     doc,
@@ -43,6 +43,6 @@ export async function initVisitorCounter() {
             visitorCount.innerText = 1;
         }
     } catch (error) {
-        console.error("Ziyaretçi sayacý hatasý:", error);
+        console.error("ZiyaretÃ§i sayacÄ± hatasÄ±:", error);
     }
 }

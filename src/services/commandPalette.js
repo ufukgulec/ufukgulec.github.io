@@ -1,21 +1,21 @@
-import { html, render } from "https://unpkg.com/lit-html?module";
+ï»¿import { html, render } from "https://unpkg.com/lit-html?module";
 import { mount, qs, qsa } from "../utils/dom.js";
 import { URLs, RESUME_URL } from "../constants/urls.js";
 
 const COMMANDS = [
-    { label: "Hakkımda", target: "about", icon: "fa-solid fa-user", meta: "Bölüm" },
-    { label: "Kariyer", target: "experience", icon: "fa-solid fa-briefcase", meta: "Bölüm" },
-    { label: "Yetenekler", target: "skills", icon: "fa-solid fa-code", meta: "Bölüm" },
-    { label: "Projeler", target: "projects", icon: "fa-solid fa-diagram-project", meta: "Bölüm" },
-    { label: "GitHub ve Depolar", target: "github", icon: "fa-solid fa-code-branch", meta: "Bölüm" },
-    { label: "Yazılar", target: "blog", icon: "fa-solid fa-pen", meta: "Bölüm" },
-    { label: "Hobiler", target: "adventures", icon: "fa-solid fa-mountain-sun", meta: "Bölüm" },
-    { label: "İletişim", target: "contact", icon: "fa-solid fa-envelope", meta: "Bölüm" },
-    { label: "GitHub Profilini Aç", href: URLs.githubProfile, icon: "fa-brands fa-github", meta: "Harici bağlantı" },
-    { label: "LinkedIn Aç", href: "https://www.linkedin.com/in/orhan-ufuk-güleç/", icon: "fa-brands fa-linkedin", meta: "Harici bağlantı" },
-    { label: "Medium Aç", href: "https://medium.com/@ufukgulec", icon: "fa-brands fa-medium", meta: "Harici bağlantı" },
-    { label: "Özgeçmişi İndir", href: RESUME_URL, icon: "fa-solid fa-file-arrow-down", meta: "İşlem" },
-    { label: "JSON Üreteç Aracı", href: "./pages/json-generator.html", icon: "fa-solid fa-file-code", meta: "Araç" },
+    { label: "HakkÄ±mda", target: "about", icon: "fa-solid fa-user", meta: "BÃ¶lÃ¼m" },
+    { label: "Kariyer", target: "experience", icon: "fa-solid fa-briefcase", meta: "BÃ¶lÃ¼m" },
+    { label: "Yetenekler", target: "skills", icon: "fa-solid fa-code", meta: "BÃ¶lÃ¼m" },
+    { label: "Projeler", target: "projects", icon: "fa-solid fa-diagram-project", meta: "BÃ¶lÃ¼m" },
+    { label: "GitHub ve Depolar", target: "github", icon: "fa-solid fa-code-branch", meta: "BÃ¶lÃ¼m" },
+    { label: "YazÄ±lar", target: "blog", icon: "fa-solid fa-pen", meta: "BÃ¶lÃ¼m" },
+    { label: "Hobiler", target: "adventures", icon: "fa-solid fa-mountain-sun", meta: "BÃ¶lÃ¼m" },
+    { label: "Ä°letiÅŸim", target: "contact", icon: "fa-solid fa-envelope", meta: "BÃ¶lÃ¼m" },
+    { label: "GitHub Profilini AÃ§", href: URLs.githubProfile, icon: "fa-brands fa-github", meta: "Harici baÄŸlantÄ±" },
+    { label: "LinkedIn AÃ§", href: "https://www.linkedin.com/in/orhan-ufuk-gÃ¼leÃ§/", icon: "fa-brands fa-linkedin", meta: "Harici baÄŸlantÄ±" },
+    { label: "Medium AÃ§", href: "https://medium.com/@ufukgulec", icon: "fa-brands fa-medium", meta: "Harici baÄŸlantÄ±" },
+    { label: "Ã–zgeÃ§miÅŸi Ä°ndir", href: RESUME_URL, icon: "fa-solid fa-file-arrow-down", meta: "Ä°ÅŸlem" },
+    { label: "JSON ÃœreteÃ§ AracÄ±", href: "./pages/json-generator.html", icon: "fa-solid fa-file-code", meta: "AraÃ§" },
 ];
 
 const paletteTemplate = () => html`
@@ -26,8 +26,8 @@ const paletteTemplate = () => html`
         <input
           type="search"
           id="commandSearch"
-          placeholder="Bir bölüme veya bağlantıya git..."
-          aria-label="Portfolyo komutlarında ara"
+          placeholder="Bir bÃ¶lÃ¼me veya baÄŸlantÄ±ya git..."
+          aria-label="Portfolyo komutlarÄ±nda ara"
         />
         <button type="button" id="commandPaletteClose" aria-label="Komut paletini kapat">
           <i class="fa-solid fa-xmark" aria-hidden="true"></i>
@@ -61,7 +61,7 @@ function renderCommands(filter = "") {
     const matches = COMMANDS.filter((c) => `${c.label} ${c.meta}`.toLowerCase().includes(normalized));
 
     if (!matches.length) {
-        render(html`<div class="command-empty">Eşleşen sonuç bulunamadı</div>`, list);
+        render(html`<div class="command-empty">EÅŸleÅŸen sonuÃ§ bulunamadÄ±</div>`, list);
         return;
     }
 

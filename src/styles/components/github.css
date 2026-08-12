@@ -1,5 +1,5 @@
 .profile-stats-row {
-  display: grid;
+  display: block;
   grid-template-columns: 1fr 1fr;
   gap: var(--space-5);
   margin-bottom: var(--space-6);

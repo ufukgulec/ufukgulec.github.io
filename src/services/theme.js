@@ -1,4 +1,4 @@
-const STORAGE_KEY = "portfolio-theme";
+﻿const STORAGE_KEY = "portfolio-theme";
 
 function getInitialTheme() {
     const stored = localStorage.getItem(STORAGE_KEY);
