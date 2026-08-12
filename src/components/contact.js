@@ -89,7 +89,6 @@ function validateField(input) {
     input.setAttribute("aria-invalid", message ? "true" : "false");
     return !message;
 }
-
 export function initContactForm() {
     const form = document.getElementById("contactForm");
     if (!form) return;
@@ -99,48 +98,28 @@ export function initContactForm() {
         input?.addEventListener("blur", () => validateField(input));
     });
 
-    form.addEventListener("submit", async (e) => {
+    form.addEventListener("submit", (e) => {
         e.preventDefault();
         const inputs = Object.keys(FIELDS).map((id) => document.getElementById(id));
         const isValid = inputs.map(validateField).every(Boolean);
         if (!isValid) return;
 
-        const submitBtn = document.getElementById("contactSubmit");
-        const status = document.getElementById("formStatus");
-        submitBtn.classList.add("is-loading");
-        submitBtn.disabled = true;
-        status.textContent = "";
-
         const [name, email, subject, message] = inputs.map((input) => input.value.trim());
 
         try {
-            if (CONTACT_FORM_ENDPOINT && isAllowedHost()) {
-                const res = await fetch(CONTACT_FORM_ENDPOINT, {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({
-                        access_key: WEB3FORMS_ACCESS_KEY,
-                        subject: `Portfolio contact: ${subject}`,
-                        name,
-                        email,
-                        message,
-                    }),
-                });
-                const data = await res.json();
-                if (!res.ok || !data.success) throw new Error("submission failed");
-            } else {
-                const mailtoSubject = encodeURIComponent(subject);
-                const body = encodeURIComponent(`${message}\n\n— ${name} (${email})`);
-                window.location.href = `mailto:orhanufukgulec@gmail.com.tr?subject=${mailtoSubject}&body=${body}`;
-            }
+            const mailtoSubject = encodeURIComponent(`Portfolio contact: ${subject}`);
+            const body = encodeURIComponent(`${message}\n\n— ${name} (${email})`);
+
+            // Doğrudan kullanıcının mail istemcisini açar
+            window.location.href = `mailto:orhanufukgulec@gmail.com.tr?subject=${mailtoSubject}&body=${body}`;
+
+            const status = document.getElementById("formStatus");
             form.classList.add("is-success");
-            status.textContent = "Teşekkürler — mesajınız iletildi.";
+            status.textContent = "Mail uygulamanız açılıyor...";
             form.reset();
         } catch {
+            const status = document.getElementById("formStatus");
             status.textContent = "Bir hata oluştu. Lütfen doğrudan e-posta gönderin.";
-        } finally {
-            submitBtn.classList.remove("is-loading");
-            submitBtn.disabled = false;
         }
     });
 }
