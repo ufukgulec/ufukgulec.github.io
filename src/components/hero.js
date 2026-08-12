@@ -3,11 +3,11 @@ import { mount } from "../utils/dom.js";
 import { RESUME_URL } from "../constants/urls.js";
 
 const FLOATING_BADGES = [
-  { label: "TypeScript", icon: "fa-brands fa-square-js", pos: "badge-1" },
-  { label: "Angular", icon: "fa-brands fa-angular", pos: "badge-2" },
-  { label: "React", icon: "fa-brands fa-react", pos: "badge-3" },
-  { label: "Nx Monorepo", icon: "fa-solid fa-diagram-project", pos: "badge-4" },
-  { label: "OpenAI", icon: "fa-solid fa-robot", pos: "badge-5" },
+    { label: "C# / .NET", icon: "fa-solid fa-code", pos: "badge-1" },
+    { label: "Blazor", icon: "fa-solid fa-laptop-code", pos: "badge-2" },
+    { label: "WPF", icon: "fa-solid fa-desktop", pos: "badge-3" },
+    { label: "Docker", icon: "fa-brands fa-docker", pos: "badge-4" },
+    { label: "SQL & API", icon: "fa-solid fa-database", pos: "badge-5" },
 ];
 
 const badgeTemplate = (badge) => html`
@@ -29,16 +29,14 @@ const heroTemplate = () => html`
     <div class="hero-copy">
       <p class="hero-eyebrow" data-reveal>
         <span class="hero-status-dot"></span>
-        Open to interesting problems
+        Kurumsal çözümler ve süreç otomasyonuna açık
       </p>
       <h1 class="hero-title" data-reveal>
-        Vinay Somawat
+        Orhan Ufuk Güleç
       </h1>
-      <p class="hero-role gradient-text-animated" data-reveal>Senior Frontend Engineer</p>
+      <p class="hero-role gradient-text-animated" data-reveal>Yazılım Geliştirici</p>
       <p class="hero-description" data-reveal>
-        I build scalable web applications, design systems, AI-powered developer
-        experiences, and high-performance user interfaces — with Angular, React,
-        and TypeScript at the core.
+        C#, .NET, Blazor UI mimarileri ve veritabanı optimizasyonları ile ölçeklenebilir kurumsal web uygulamaları ve arka uç altyapıları geliştiriyorum.
       </p>
       <div class="hero-cta-row" data-reveal>
         <a
@@ -48,17 +46,17 @@ const heroTemplate = () => html`
           rel="noopener noreferrer"
         >
           <i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i>
-          Resume
+          Özgeçmiş
         </a>
         <a class="btn btn-secondary magnetic ripple" href="#experience">
-          View Work
+          Deneyimler
         </a>
         <a class="btn btn-ghost underline-link magnetic" href="#contact">
-          Contact
+          İletişim
           <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
         </a>
       </div>
-      <p class="hero-resume-updated" data-reveal>Resume updated Jul 2026</p>
+      <p class="hero-resume-updated" data-reveal>Özgeçmiş güncellendi: Temmuz 2026</p>
     </div>
 
     <div class="hero-visual" data-reveal>
@@ -71,12 +69,12 @@ const heroTemplate = () => html`
     </div>
   </div>
 
-  <a class="hero-scroll-cue underline-link" href="#about" aria-label="Scroll to About section">
-    <span>Scroll</span>
+  <a class="hero-scroll-cue underline-link" href="#about" aria-label="Hakkımda bölümüne kaydır">
+    <span>Kaydır</span>
     <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
   </a>
 `;
 
 export function mountHero() {
-  return mount("hero", heroTemplate());
+    return mount("hero", heroTemplate());
 }

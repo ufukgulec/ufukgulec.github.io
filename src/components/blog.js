@@ -14,14 +14,12 @@ const blogSkeleton = () => html`
 const blogTemplate = () => html`
   <div class="container">
     <div class="section-heading">
-      <p class="section-eyebrow" data-reveal>Writing</p>
+      <p class="section-eyebrow" data-reveal>Yazýlar</p>
       <h2 class="section-title" id="blog-title" data-reveal>
-        Latest <span class="gradient-text">Blog Posts</span>
+        Güncel <span class="gradient-text">Yazýlar ve Notlar</span>
       </h2>
       <p class="section-subtitle" data-reveal>
-        Notes from
-        <a class="underline-link" href="https://vinaysomawat.medium.com/" target="_blank" rel="noopener noreferrer">Medium</a>
-        on frontend architecture and shipping at scale.
+        Kurumsal mimariler, süreç otomasyonu ve yazýlým geliþtirme üzerine düþüncelerim.
       </p>
     </div>
     <div class="blog-grid" id="blogs">
@@ -31,7 +29,7 @@ const blogTemplate = () => html`
 `;
 
 export function mountBlog() {
-  return mount("blog", blogTemplate());
+    return mount("blog", blogTemplate());
 }
 
 const categoryChips = (categories = []) => html`
@@ -57,5 +55,5 @@ const blogCard = (item, index) => html`
 `;
 
 export function blogListTemplate(items) {
-  return html`${items.slice(0, 3).map((item, i) => blogCard(item, i))}`;
+    return html`${items.slice(0, 3).map((item, i) => blogCard(item, i))}`;
 }

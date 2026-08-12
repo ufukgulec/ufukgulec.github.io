@@ -5,25 +5,25 @@ import { skills } from "../../user-data/data.js";
 // Display-only grouping layered on top of the flat `skills` list in user-data/data.js
 // (kept flat there so the JSON generator tool's multi-select keeps working).
 const CATEGORIES = [
-  { category: "Languages & Frameworks", icon: "fa-solid fa-code", match: ["TypeScript", "Angular", "React", "Signals"] },
-  { category: "State & Data", icon: "fa-solid fa-diagram-project", match: ["RxJS", "NgRx", "NGXS", "WebSockets"] },
-  { category: "Architecture", icon: "fa-solid fa-layer-group", match: ["Nx", "Microfrontends", "Module Federation"] },
-  { category: "Tooling & Quality", icon: "fa-solid fa-vial", match: ["Storybook", "Playwright"] },
-  { category: "AI", icon: "fa-solid fa-robot", match: ["OpenAI"] },
+    { category: "Diller ve Çatýlar", icon: "fa-solid fa-code", match: ["C#", ".NET", "Blazor", "WPF"] },
+    { category: "Veri ve Servisler", icon: "fa-solid fa-diagram-project", match: ["SQL", "Entity Framework", "WebSockets", "REST API"] },
+    { category: "Mimari ve Altyapý", icon: "fa-solid fa-layer-group", match: ["Docker", "Ubuntu VPS", "Nginx Proxy Manager", "Microservices"] },
+    { category: "Araçlar ve Kalite", icon: "fa-solid fa-vial", match: ["Git", "Visual Studio", "Postman", "Linux"] },
+    { category: "Entegrasyonlar", icon: "fa-solid fa-robot", match: ["Microsoft Graph API", "Logo API", "SAP", "SMTP"] },
 ];
 
 function groupSkills() {
-  const remaining = new Set(skills);
-  const groups = CATEGORIES.map(({ category, icon, match }) => {
-    const items = match.filter((name) => remaining.has(name));
-    items.forEach((name) => remaining.delete(name));
-    return { category, icon, items };
-  }).filter((group) => group.items.length);
+    const remaining = new Set(skills);
+    const groups = CATEGORIES.map(({ category, icon, match }) => {
+        const items = match.filter((name) => remaining.has(name));
+        items.forEach((name) => remaining.delete(name));
+        return { category, icon, items };
+    }).filter((group) => group.items.length);
 
-  if (remaining.size) {
-    groups.push({ category: "Other", icon: "fa-solid fa-star", items: [...remaining] });
-  }
-  return groups;
+    if (remaining.size) {
+        groups.push({ category: "Diðer", icon: "fa-solid fa-star", items: [...remaining] });
+    }
+    return groups;
 }
 
 const skillGroup = (group, index) => html`
@@ -41,13 +41,12 @@ const skillGroup = (group, index) => html`
 const skillsTemplate = () => html`
   <div class="container">
     <div class="section-heading">
-      <p class="section-eyebrow" data-reveal>Toolbox</p>
+      <p class="section-eyebrow" data-reveal>Yetenek Seti</p>
       <h2 class="section-title" id="skills-title" data-reveal>
-        Skills & <span class="gradient-text">Technologies</span>
+        Yetenekler ve <span class="gradient-text">Teknolojiler</span>
       </h2>
       <p class="section-subtitle" data-reveal>
-        The stack I reach for to turn ambiguous requirements into fast, resilient
-        interfaces.
+        Karmaþýk kurumsal gereksinimleri güvenilir ve performanslý arka uç sistemlerine dönüþtürürken kullandýðým teknolojiler.
       </p>
     </div>
     <div class="skill-grid">
@@ -57,5 +56,5 @@ const skillsTemplate = () => html`
 `;
 
 export function mountSkills() {
-  return mount("skills", skillsTemplate());
+    return mount("skills", skillsTemplate());
 }

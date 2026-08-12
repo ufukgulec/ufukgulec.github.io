@@ -27,7 +27,7 @@ const adventureGroup = (group, index) => html`
       </span>
       <div>
         <h3>${group.title}</h3>
-        <p>${group.items.length} adventures logged</p>
+        <p>${group.items.length} kayýtlý aktivite</p>
       </div>
     </div>
     <ul class="adventure-items">
@@ -39,12 +39,12 @@ const adventureGroup = (group, index) => html`
 const adventuresTemplate = () => html`
   <div class="container">
     <div class="section-heading">
-      <p class="section-eyebrow" data-reveal>Off the Clock</p>
+      <p class="section-eyebrow" data-reveal>Mesai Dýþýnda</p>
       <h2 class="section-title" id="adventures-title" data-reveal>
-        Mountain <span class="gradient-text">Adventures</span>
+        Deniz ve <span class="gradient-text">Hobiler</span>
       </h2>
       <p class="section-subtitle" data-reveal>
-        When I'm not writing code, I'm crossing mountain passes.
+        Kod yazmadýðým zamanlarda amatör deniz balýkçýlýðýyla ilgileniyorum.
       </p>
     </div>
     <div class="adventure-grid">
@@ -54,5 +54,5 @@ const adventuresTemplate = () => html`
 `;
 
 export function mountAdventures() {
-  return mount("adventures", adventuresTemplate());
+    return mount("adventures", adventuresTemplate());
 }

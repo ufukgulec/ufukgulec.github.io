@@ -17,11 +17,11 @@ const projectCard = (item, index) => html`
     <div class="project-links">
       ${item.demo
         ? html`<a class="btn btn-primary magnetic ripple" href="${item.demo}" target="_blank" rel="noopener noreferrer">
-            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Live Demo
+            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Canlý Önizleme
           </a>`
         : ""}
       <a class="btn btn-secondary magnetic ripple" href="${item.repo}" target="_blank" rel="noopener noreferrer">
-        <i class="fa-brands fa-github" aria-hidden="true"></i> Source
+        <i class="fa-brands fa-github" aria-hidden="true"></i> Kaynak Kodu
       </a>
     </div>
   </article>
@@ -30,11 +30,11 @@ const projectCard = (item, index) => html`
 const projectsTemplate = () => html`
   <div class="container">
     <div class="section-heading">
-      <p class="section-eyebrow" data-reveal>Featured Work</p>
+      <p class="section-eyebrow" data-reveal>Öne Çýkan Çalýþmalar</p>
       <h2 class="section-title" id="projects-title" data-reveal>
-        Side <span class="gradient-text">Projects</span>
+        Yan <span class="gradient-text">Projeler</span>
       </h2>
-      <p class="section-subtitle" data-reveal>Things I've built and shipped outside of day-job work.</p>
+      <p class="section-subtitle" data-reveal>Ana iþimin dýþýnda geliþtirip hayata geçirdiðim projeler.</p>
     </div>
     <div class="project-grid">
       ${projects.map((item, i) => projectCard(item, i))}
@@ -43,5 +43,5 @@ const projectsTemplate = () => html`
 `;
 
 export function mountProjects() {
-  return mount("projects", projectsTemplate());
+    return mount("projects", projectsTemplate());
 }

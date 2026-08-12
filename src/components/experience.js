@@ -32,17 +32,16 @@ const timelineEntry = (item, index) => html`
 `;
 
 const experienceTemplate = () => {
-  const items = [...experience, ...education];
-  return html`
+    const items = [...experience, ...education];
+    return html`
     <div class="container">
       <div class="section-heading">
-        <p class="section-eyebrow" data-reveal>Career</p>
+        <p class="section-eyebrow" data-reveal>Kariyer</p>
         <h2 class="section-title" id="experience-title" data-reveal>
-          Work <span class="gradient-text">Experience</span>
+          Ýþ Deneyimi ve <span class="gradient-text">Eðitim</span>
         </h2>
         <p class="section-subtitle" data-reveal>
-          Six years of shipping frontend systems that stayed fast, stable, and
-          maintainable as usage scaled.
+          Kurumsal süreç otomasyonu, iþ akýþ yönetimi ve performanslý altyapýlar geliþtirme yolculuðum.
         </p>
       </div>
       <div class="timeline">
@@ -53,5 +52,5 @@ const experienceTemplate = () => {
 };
 
 export function mountExperience() {
-  return mount("experience", experienceTemplate());
+    return mount("experience", experienceTemplate());
 }

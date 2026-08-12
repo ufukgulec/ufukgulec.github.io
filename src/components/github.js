@@ -13,18 +13,18 @@ const repoSkeleton = () => html`
 const githubTemplate = () => html`
   <div class="container">
     <div class="section-heading">
-      <p class="section-eyebrow" data-reveal>Open Source</p>
+      <p class="section-eyebrow" data-reveal>Açýk Kaynak</p>
       <h2 class="section-title" id="github-title" data-reveal>
-        GitHub & <span class="gradient-text">Repositories</span>
+        GitHub ve <span class="gradient-text">Depolar</span>
       </h2>
       <p class="section-subtitle" data-reveal>
-        Live stats and pinned repositories, pulled directly from
-        <a class="underline-link" href="${URLs.githubProfile}" target="_blank" rel="noopener noreferrer">github.com/vinaysomawat</a>.
+        Canlý istatistikler ve sabitlenmiþ projeler, doðrudan
+        <a class="underline-link" href="${URLs.githubProfile}" target="_blank" rel="noopener noreferrer">github.com/ufukgulec</a> üzerinden aktarýlmaktadýr.
       </p>
     </div>
 
     <div class="profile-stats-row" data-reveal>
-      <div class="profile-card-shell glass tilt" data-github-card data-username="vinaysomawat">
+      <div class="profile-card-shell glass tilt" data-github-card data-username="ufukgulec">
         <div class="skeleton" style="height:80px"></div>
       </div>
       <div class="profile-card-shell glass tilt" data-stack-card data-user-id="8461233">
@@ -33,10 +33,10 @@ const githubTemplate = () => html`
     </div>
 
     <figure class="contribution-graph glass" data-reveal>
-      <figcaption class="contribution-graph-label">Contribution activity</figcaption>
+      <figcaption class="contribution-graph-label">Katký Aktivitesi</figcaption>
       <img
         src="${URLs.gitContributionGraph}"
-        alt="GitHub contribution graph for vinaysomawat"
+        alt="GitHub contribution graph for ufukgulec"
         loading="lazy"
         width="880"
         height="110"
@@ -50,12 +50,12 @@ const githubTemplate = () => html`
 `;
 
 export function mountGithub() {
-  return mount("github", githubTemplate());
+    return mount("github", githubTemplate());
 }
 
 const repoStats = (item) => html`
   <div class="repo-stats">
-    <span class="repo-stat"><span class="repo-lang-dot" aria-hidden="true"></span>${item.language || "Code"}</span>
+    <span class="repo-stat"><span class="repo-lang-dot" aria-hidden="true"></span>${item.language || "Kod"}</span>
     <span class="repo-stat"><i class="fa-regular fa-star" aria-hidden="true"></i>${item.stars ?? 0}</span>
     <span class="repo-stat"><i class="fa-solid fa-code-fork" aria-hidden="true"></i>${item.forks ?? 0}</span>
   </div>
@@ -74,11 +74,11 @@ const repoCard = (item, index) => html`
       <i class="fa-solid fa-code-branch" aria-hidden="true"></i>
       <h3>${item.name}</h3>
     </div>
-    <p class="repo-description">${item.description || "No description provided."}</p>
+    <p class="repo-description">${item.description || "Açýklama bulunmuyor."}</p>
     ${repoStats(item)}
   </a>
 `;
 
 export function repoListTemplate(items) {
-  return html`${items.slice(0, 4).map((item, i) => repoCard(item, i))}`;
+    return html`${items.slice(0, 4).map((item, i) => repoCard(item, i))}`;
 }

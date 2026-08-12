@@ -25,58 +25,58 @@ import { initProfileCards } from "./services/profileCard.js";
 import { initVisitorCounter } from "./services/visitorCounter.js";
 
 async function loadRepos() {
-  try {
-    const items = await fetchJson(URLs.gitRepo, "GitHub repos");
-    mount("repos", repoListTemplate(items));
-    observeReveals(document.getElementById("repos"));
-  } catch {
-    showError("repos", "Could not load repositories.");
-  }
+    try {
+        const items = await fetchJson(URLs.gitRepo, "GitHub depoları");
+        mount("repos", repoListTemplate(items));
+        observeReveals(document.getElementById("repos"));
+    } catch {
+        showError("repos", "Depolar yüklenemedi.");
+    }
 }
 
 async function loadBlogs() {
-  try {
-    const { items } = await fetchJson(URLs.medium, "Medium RSS");
-    mount("blogs", blogListTemplate(items));
-    observeReveals(document.getElementById("blogs"));
-  } catch {
-    showError("blogs", "Could not load blog posts.");
-  }
+    try {
+        const { items } = await fetchJson(URLs.medium, "Medium RSS");
+        mount("blogs", blogListTemplate(items));
+        observeReveals(document.getElementById("blogs"));
+    } catch {
+        showError("blogs", "Yazılar yüklenemedi.");
+    }
 }
 
 async function loadPageTitle() {
-  try {
-    const { basics } = await fetchJson(URLs.gitConnected, "gitconnected");
-    if (basics?.name) document.title = `${basics.name} — Senior Frontend Engineer`;
-  } catch {
-    // non-critical — silent fail, default <title> already set
-  }
+    try {
+        const { basics } = await fetchJson(URLs.gitConnected, "gitconnected");
+        if (basics?.name) document.title = `${basics.name} — Yazılım Geliştirici`;
+    } catch {
+        // kritik değil — sessiz hata, varsayılan <title> zaten ayarlı
+    }
 }
 
 function mountStaticSections() {
-  mountNav();
-  mountHero();
-  mountAbout();
-  mountExperience();
-  mountSkills();
-  mountProjects();
-  mountGithub();
-  mountBlog();
-  mountAdventures();
-  mountContact();
-  mountCoffee();
-  mountFooter();
+    mountNav();
+    mountHero();
+    mountAbout();
+    mountExperience();
+    mountSkills();
+    mountProjects();
+    mountGithub();
+    mountBlog();
+    mountAdventures();
+    mountContact();
+    mountCoffee();
+    mountFooter();
 }
 
 function initServices() {
-  initTheme();
-  initNavScroll();
-  initCommandPalette();
-  initEasterEggs();
-  initInteractions();
-  initContactForm();
-  initProfileCards();
-  initVisitorCounter();
+    initTheme();
+    initNavScroll();
+    initCommandPalette();
+    initEasterEggs();
+    initInteractions();
+    initContactForm();
+    initProfileCards();
+    initVisitorCounter();
 }
 
 mountStaticSections();
