@@ -1,4 +1,4 @@
-import { html } from "https://unpkg.com/lit-html?module";
+ï»¿import { html } from "https://unpkg.com/lit-html?module";
 import { mount } from "../utils/dom.js";
 import { experience, education } from "../../user-data/data.js";
 
@@ -36,12 +36,12 @@ const experienceTemplate = () => {
     return html`
     <div class="container">
       <div class="section-heading">
-        <p class="section-eyebrow" data-reveal>Geçmiş</p>
+        <p class="section-eyebrow" data-reveal>GeÃ§miÅŸ</p>
         <h2 class="section-title" id="experience-title" data-reveal>
-          İş Deneyimi ve <span class="gradient-text">Eğitim</span>
+          Ä°ÅŸ Deneyimi ve <span class="gradient-text">EÄŸitim</span>
         </h2>
         <p class="section-subtitle" data-reveal>
-          Yazılım geliştirme, dijital çözümler ve akademik geçmişimle şekillenen profesyonel yolculuğum.
+          YazÄ±lÄ±m geliÅŸtirme, dijital Ã§Ã¶zÃ¼mler ve akademik geÃ§miÅŸimle ÅŸekillenen profesyonel yolculuÄŸum.
         </p>
       </div>
       <div class="timeline">
