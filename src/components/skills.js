@@ -6,22 +6,17 @@ const CATEGORIES = [
     {
         category: "Diller ve Frameworkler",
         icon: "fa-solid fa-code",
-        match: ["C#", ".NET Core", ".NET Framework", "Blazor", "WPF", "JavaScript", "HTML/CSS"]
+        match: ["C#", ".NET Core", ".NET Framework", "ASP.NET Core", "Blazor", "WPF", "JavaScript", "TypeScript", "HTML/CSS"]
     },
     {
         category: "BPM ve Kurumsal Platformlar",
         icon: "fa-solid fa-network-wired",
-        match: ["Bimser Synergy", "Bimser eBA", "İş Akış Yönetimi", "Form Tasarımı", "Süreç Otomasyonu"]
+        match: ["Bimser Synergy", "Bimser eBA", "BPM", "İş Akış Yönetimi", "Form Tasarımı", "Süreç Otomasyonu"]
     },
     {
         category: "Veritabanı ve Servisler",
         icon: "fa-solid fa-database",
-        match: ["MSSQL", "T-SQL", "Entity Framework", "REST API", "XML / UBL", "WebSockets"]
-    },
-    {
-        category: "Mimari ve Altyapı",
-        icon: "fa-solid fa-layer-group",
-        match: ["Clean Architecture", "Docker", "Ubuntu VPS", "Nginx Proxy Manager"]
+        match: ["MSSQL", "Oracle", "T-SQL", "Entity Framework", "REST API", "XML / UBL", "WebSockets"]
     }
 ];
 

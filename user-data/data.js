@@ -4,12 +4,6 @@ export const bio = [
 ];
 
 export const skills = [
-    "C#",
-    ".NET Core",
-    "ASP.NET Core",
-    "Bimser eBA",
-    "Bimser Synergy",
-    "BPM",
     "MSSQL",
     "Oracle",
     "REST API",

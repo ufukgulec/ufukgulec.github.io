@@ -26,8 +26,8 @@ const linkItem = (link, mobile = false) => html`
 const navTemplate = () => html`
   <header class="site-nav glass" id="siteNav">
     <div class="container nav-inner">
-      <a href="#hero" class="nav-logo underline-link" aria-label="Ufuk Güleç — başa dön">
-        Ufuk<span class="gradient-text">.</span>
+      <a href="#hero" class="nav-logo underline-link" aria-label="Orhan Ufuk Güleç">
+        OUG<span class="gradient-text">.</span>
       </a>
 
       <nav class="nav-links" aria-label="Birincil">
