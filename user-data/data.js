@@ -4,14 +4,41 @@ export const bio = [
 ];
 
 export const skills = [
-    "MSSQL",
-    "Oracle",
-    "REST API",
+    // Diller ve Frameworkler
+    "C#",
+    ".NET Core",
+    ".NET Framework",
+    "ASP.NET Core",
+    "Blazor",
+    "WPF",
     "JavaScript",
     "TypeScript",
+    "HTML/CSS",
+
+    // BPM ve Kurumsal Platformlar (Eksik olanlar bunlardı)
+    "Bimser Synergy",
+    "Bimser eBA",
+    "BPM",
+    "İş Akış Yönetimi",
+    "Form Tasarımı",
+    "Süreç Otomasyonu",
+
+    // Veritabanı ve Servisler
+    "MSSQL",
+    "Oracle",
+    "T-SQL",
+    "Entity Framework",
+    "REST API",
+    "XML / UBL",
+    "WebSockets",
+
+    // Mimari ve Altyapı
     "Clean Architecture",
     "CQRS",
     "MediatR",
+    "Docker",
+    "Ubuntu VPS",
+    "Nginx Proxy Manager"
 ];
 
 export const projects = [
