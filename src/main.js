@@ -22,7 +22,6 @@ import { initTheme } from "./services/theme.js";
 import { initCommandPalette } from "./services/commandPalette.js";
 import { initEasterEggs } from "./services/easterEgg.js";
 import { initProfileCards } from "./services/profileCard.js";
-import { initVisitorCounter } from "./services/visitorCounter.js";
 
 async function loadRepos() {
     try {
@@ -76,7 +75,6 @@ function initServices() {
     initInteractions();
     initContactForm();
     initProfileCards();
-    initVisitorCounter();
 }
 
 mountStaticSections();

@@ -1,4 +1,4 @@
-import { html } from "https://unpkg.com/lit-html?module";
+ï»¿import { html } from "https://unpkg.com/lit-html?module";
 import { mount } from "../utils/dom.js";
 import { adventures } from "../../user-data/data.js";
 
@@ -27,7 +27,7 @@ const adventureGroup = (group, index) => html`
       </span>
       <div>
         <h3>${group.title}</h3>
-        <p>${group.items.length} kayıtlı aktivite</p>
+        <p>${group.items.length} kayÄ±tlÄ± aktivite</p>
       </div>
     </div>
     <ul class="adventure-items">
@@ -39,12 +39,12 @@ const adventureGroup = (group, index) => html`
 const adventuresTemplate = () => html`
   <div class="container">
     <div class="section-heading">
-      <p class="section-eyebrow" data-reveal>Mesai Dışında</p>
+      <p class="section-eyebrow" data-reveal>Mesai DÄ±ÅŸÄ±nda</p>
       <h2 class="section-title" id="adventures-title" data-reveal>
         Deniz ve <span class="gradient-text">Hobiler</span>
       </h2>
       <p class="section-subtitle" data-reveal>
-        Kod yazmadığım zamanlarda amatör deniz balıkçılığıyla ilgileniyorum.
+        Kod yazmadÄ±ÄŸÄ±m zamanlarda amatÃ¶r deniz balÄ±kÃ§Ä±lÄ±ÄŸÄ±yla ilgileniyorum.
       </p>
     </div>
     <div class="adventure-grid">

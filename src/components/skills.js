@@ -1,4 +1,4 @@
-import { html } from "https://unpkg.com/lit-html?module";
+ï»¿import { html } from "https://unpkg.com/lit-html?module";
 import { mount } from "../utils/dom.js";
 import { skills } from "../../user-data/data.js";
 
@@ -11,15 +11,15 @@ const CATEGORIES = [
     {
         category: "BPM ve Kurumsal Platformlar",
         icon: "fa-solid fa-network-wired",
-        match: ["Bimser Synergy", "Bimser eBA", "İş Akış Yönetimi", "Form Tasarımı", "Süreç Otomasyonu"]
+        match: ["Bimser Synergy", "Bimser eBA", "Ä°ÅŸ AkÄ±ÅŸ YÃ¶netimi", "Form TasarÄ±mÄ±", "SÃ¼reÃ§ Otomasyonu"]
     },
     {
-        category: "Veritabanı ve Servisler",
+        category: "VeritabanÄ± ve Servisler",
         icon: "fa-solid fa-database",
         match: ["MSSQL", "T-SQL", "Entity Framework", "REST API", "XML / UBL", "WebSockets"]
     },
     {
-        category: "Mimari ve Altyapı",
+        category: "Mimari ve AltyapÄ±",
         icon: "fa-solid fa-layer-group",
         match: ["Clean Architecture", "Docker", "Ubuntu VPS", "Nginx Proxy Manager"]
     }
@@ -34,7 +34,7 @@ function groupSkills() {
     }).filter((group) => group.items.length);
 
     if (remaining.size) {
-        groups.push({ category: "Diğer", icon: "fa-solid fa-star", items: [...remaining] });
+        groups.push({ category: "DiÄŸer", icon: "fa-solid fa-star", items: [...remaining] });
     }
     return groups;
 }
@@ -59,7 +59,7 @@ const skillsTemplate = () => html`
         Yetenekler ve <span class="gradient-text">Teknolojiler</span>
       </h2>
       <p class="section-subtitle" data-reveal>
-        Karmaşık kurumsal gereksinimleri güvenilir ve performanslı arka uç sistemlerine dönüştürürken kullandığım teknolojiler.
+        KarmaÅŸÄ±k kurumsal gereksinimleri gÃ¼venilir ve performanslÄ± arka uÃ§ sistemlerine dÃ¶nÃ¼ÅŸtÃ¼rÃ¼rken kullandÄ±ÄŸÄ±m teknolojiler.
       </p>
     </div>
     <div class="skill-grid">

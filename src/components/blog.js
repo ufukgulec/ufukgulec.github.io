@@ -1,4 +1,4 @@
-import { html } from "https://unpkg.com/lit-html?module";
+ï»¿import { html } from "https://unpkg.com/lit-html?module";
 import { mount } from "../utils/dom.js";
 import { timeAgo } from "../utils/fetch.js";
 
@@ -14,12 +14,12 @@ const blogSkeleton = () => html`
 const blogTemplate = () => html`
   <div class="container">
     <div class="section-heading">
-      <p class="section-eyebrow" data-reveal>Yazılar</p>
+      <p class="section-eyebrow" data-reveal>YazÄ±lar</p>
       <h2 class="section-title" id="blog-title" data-reveal>
-        Güncel <span class="gradient-text">Yazılar ve Notlar</span>
+        GÃ¼ncel <span class="gradient-text">YazÄ±lar ve Notlar</span>
       </h2>
       <p class="section-subtitle" data-reveal>
-        Kurumsal mimariler, süreç otomasyonu ve yazılım geliştirme üzerine düşüncelerim.
+        Kurumsal mimariler, sÃ¼reÃ§ otomasyonu ve yazÄ±lÄ±m geliÅŸtirme Ã¼zerine dÃ¼ÅŸÃ¼ncelerim.
       </p>
     </div>
     <div class="blog-grid" id="blogs">

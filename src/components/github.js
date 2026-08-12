@@ -1,4 +1,4 @@
-import { html } from "https://unpkg.com/lit-html?module";
+ï»¿import { html } from "https://unpkg.com/lit-html?module";
 import { mount } from "../utils/dom.js";
 import { URLs } from "../constants/urls.js";
 
@@ -13,13 +13,13 @@ const repoSkeleton = () => html`
 const githubTemplate = () => html`
   <div class="container">
     <div class="section-heading">
-      <p class="section-eyebrow" data-reveal>Açık Kaynak</p>
+      <p class="section-eyebrow" data-reveal>AÃ§Ä±k Kaynak</p>
       <h2 class="section-title" id="github-title" data-reveal>
         GitHub ve <span class="gradient-text">Depolar</span>
       </h2>
       <p class="section-subtitle" data-reveal>
-        Canlı istatistikler ve sabitlenmiş projeler, doğrudan
-        <a class="underline-link" href="${URLs.githubProfile}" target="_blank" rel="noopener noreferrer">github.com/ufukgulec</a> üzerinden aktarılmaktadır.
+        CanlÄ± istatistikler ve sabitlenmiÅŸ projeler, doÄŸrudan
+        <a class="underline-link" href="${URLs.githubProfile}" target="_blank" rel="noopener noreferrer">github.com/ufukgulec</a> Ã¼zerinden aktarÄ±lmaktadÄ±r.
       </p>
     </div>
 
@@ -33,7 +33,7 @@ const githubTemplate = () => html`
     </div>
 
     <figure class="contribution-graph glass" data-reveal>
-      <figcaption class="contribution-graph-label">Katkı Aktivitesi</figcaption>
+      <figcaption class="contribution-graph-label">KatkÄ± Aktivitesi</figcaption>
       <img
         src="${URLs.gitContributionGraph}"
         alt="GitHub contribution graph for ufukgulec"
@@ -74,7 +74,7 @@ const repoCard = (item, index) => html`
       <i class="fa-solid fa-code-branch" aria-hidden="true"></i>
       <h3>${item.name}</h3>
     </div>
-    <p class="repo-description">${item.description || "Açıklama bulunmuyor."}</p>
+    <p class="repo-description">${item.description || "AÃ§Ä±klama bulunmuyor."}</p>
     ${repoStats(item)}
   </a>
 `;
