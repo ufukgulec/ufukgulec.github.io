@@ -63,7 +63,6 @@ function mountStaticSections() {
     mountBlog();
     mountAdventures();
     mountContact();
-    mountCoffee();
     mountFooter();
 }
 
