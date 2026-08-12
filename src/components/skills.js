@@ -2,14 +2,27 @@ import { html } from "https://unpkg.com/lit-html?module";
 import { mount } from "../utils/dom.js";
 import { skills } from "../../user-data/data.js";
 
-// Display-only grouping layered on top of the flat `skills` list in user-data/data.js
-// (kept flat there so the JSON generator tool's multi-select keeps working).
 const CATEGORIES = [
-    { category: "Diller ve Çatýlar", icon: "fa-solid fa-code", match: ["C#", ".NET", "Blazor", "WPF"] },
-    { category: "Veri ve Servisler", icon: "fa-solid fa-diagram-project", match: ["SQL", "Entity Framework", "WebSockets", "REST API"] },
-    { category: "Mimari ve Altyapý", icon: "fa-solid fa-layer-group", match: ["Docker", "Ubuntu VPS", "Nginx Proxy Manager", "Microservices"] },
-    { category: "Araçlar ve Kalite", icon: "fa-solid fa-vial", match: ["Git", "Visual Studio", "Postman", "Linux"] },
-    { category: "Entegrasyonlar", icon: "fa-solid fa-robot", match: ["Microsoft Graph API", "Logo API", "SAP", "SMTP"] },
+    {
+        category: "Diller ve Frameworkler",
+        icon: "fa-solid fa-code",
+        match: ["C#", ".NET Core", ".NET Framework", "Blazor", "WPF", "JavaScript", "HTML/CSS"]
+    },
+    {
+        category: "BPM ve Kurumsal Platformlar",
+        icon: "fa-solid fa-network-wired",
+        match: ["Bimser Synergy", "Bimser eBA", "Ýþ Akýþ Yönetimi", "Form Tasarýmý", "Süreç Otomasyonu"]
+    },
+    {
+        category: "Veritabaný ve Servisler",
+        icon: "fa-solid fa-database",
+        match: ["MSSQL", "T-SQL", "Entity Framework", "REST API", "XML / UBL", "WebSockets"]
+    },
+    {
+        category: "Mimari ve Altyapý",
+        icon: "fa-solid fa-layer-group",
+        match: ["Clean Architecture", "Docker", "Ubuntu VPS", "Nginx Proxy Manager"]
+    }
 ];
 
 function groupSkills() {

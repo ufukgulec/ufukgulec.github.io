@@ -4,10 +4,10 @@ import { RESUME_URL } from "../constants/urls.js";
 
 const FLOATING_BADGES = [
     { label: "C# / .NET", icon: "fa-solid fa-code", pos: "badge-1" },
-    { label: "Blazor", icon: "fa-solid fa-laptop-code", pos: "badge-2" },
-    { label: "WPF", icon: "fa-solid fa-desktop", pos: "badge-3" },
-    { label: "Docker", icon: "fa-brands fa-docker", pos: "badge-4" },
-    { label: "SQL & API", icon: "fa-solid fa-database", pos: "badge-5" },
+    { label: "Bimser Synergy", icon: "fa-solid fa-network-wired", pos: "badge-2" },
+    { label: "Bimser eBA", icon: "fa-solid fa-diagram-project", pos: "badge-3" },
+    { label: "MSSQL & API", icon: "fa-solid fa-database", pos: "badge-4" },
+    { label: "Blazor", icon: "fa-solid fa-laptop-code", pos: "badge-5" },
 ];
 
 const badgeTemplate = (badge) => html`
@@ -36,7 +36,7 @@ const heroTemplate = () => html`
       </h1>
       <p class="hero-role gradient-text-animated" data-reveal>Yazılım Geliştirici</p>
       <p class="hero-description" data-reveal>
-        C#, .NET, Blazor UI mimarileri ve veritabanı optimizasyonları ile ölçeklenebilir kurumsal web uygulamaları ve arka uç altyapıları geliştiriyorum.
+        C#, .NET Core, Bimser Synergy & eBA platformları, BPM iş akışları ve MSSQL veritabanı mimarileriyle ölçeklenebilir kurumsal çözümler geliştiriyorum.
       </p>
       <div class="hero-cta-row" data-reveal>
         <a
@@ -56,7 +56,7 @@ const heroTemplate = () => html`
           <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
         </a>
       </div>
-      <p class="hero-resume-updated" data-reveal>Özgeçmiş güncellendi: Temmuz 2026</p>
+      <p class="hero-resume-updated" data-reveal>Özgeçmiş güncellendi: Ağustos 2026</p>
     </div>
 
     <div class="hero-visual" data-reveal>

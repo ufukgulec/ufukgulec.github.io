@@ -36,12 +36,12 @@ const experienceTemplate = () => {
     return html`
     <div class="container">
       <div class="section-heading">
-        <p class="section-eyebrow" data-reveal>Kariyer</p>
+        <p class="section-eyebrow" data-reveal>Geçmiþ</p>
         <h2 class="section-title" id="experience-title" data-reveal>
           Ýþ Deneyimi ve <span class="gradient-text">Eðitim</span>
         </h2>
         <p class="section-subtitle" data-reveal>
-          Kurumsal süreç otomasyonu, iþ akýþ yönetimi ve performanslý altyapýlar geliþtirme yolculuðum.
+          Yazýlým geliþtirme, dijital çözümler ve akademik geçmiþimle þekillenen profesyonel yolculuðum.
         </p>
       </div>
       <div class="timeline">

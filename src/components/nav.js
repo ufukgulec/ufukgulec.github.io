@@ -8,7 +8,6 @@ const NAV_LINKS = [
     { id: "projects", label: "Projeler" },
     { id: "github", label: "GitHub" },
     { id: "blog", label: "Yazılar" },
-    { id: "adventures", label: "Hobiler" },
     { id: "contact", label: "İletişim" },
 ];
 

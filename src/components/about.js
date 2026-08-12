@@ -15,10 +15,12 @@ function yearsOfExperience() {
 function buildStats() {
     const years = yearsOfExperience();
     return [
-        { value: years ? `${years}+` : "2+", label: "Deneyim Yılı" },
-        { value: `${experience.length}`, label: "Kurumsal Deneyim" },
-        { value: "BPM", label: "İş Süreçleri Yönetimi" },
-        { value: ".NET", label: "Kurumsal Çözümler" },
+        { value: years ? `${years}+` : "4+", label: "Yıl Kurumsal Deneyim" },
+        { value: "Bimser", label: "Synergy & eBA Platformları" },
+        { value: "BPM", label: "İş Süreçleri Otomasyonu" },
+        { value: ".NET", label: "C# & Arka Uç Çözümleri" },
+        { value: "T-SQL", label: "Veritabanı & Sorgu Yönetimi" },
+        { value: "API", label: "Kurumsal Sistem Bağlantıları" }
     ];
 }
 
