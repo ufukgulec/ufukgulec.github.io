@@ -65,7 +65,7 @@ export const projects = [
 export const experience = [
     {
         title: "Feysoft Yazılım Danışmanlık A.Ş.",
-        duration: "2024 – Present",
+        duration: "2022 – Present",
         subtitle: "Yazılım Geliştirme Uzmanı",
         details: [
             "Kurumsal iş süreçleri yönetimi (BPM), süreç otomasyonu ve dijital dönüşüm projelerinde yazılım geliştirme ve süreç danışmanlığı yürütüyorum.",
@@ -88,7 +88,7 @@ export const experience = [
     },
     {
         title: "Kabi Partners",
-        duration: "2022 – Stajyer",
+        duration: "2021 – Stajyer",
         subtitle: "Yazılım Geliştirme Uzmanı",
         details: [
             "yuvanikur.com, dugunbuketi.com ve dugunyardimcisi.com gibi yüksek trafikli platformlarda WordPress tabanlı çalışmalar gerçekleştirdim, özel eklenti geliştirme deneyimleri edindim.",
